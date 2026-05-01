@@ -1,0 +1,15 @@
+# Caches
+__MACOSX/
+.DS_Store
+
+# Builds
+target/
+
+# Env
+.env.local
+.env.*
+.env.*.local
+!.env.example
+
+# Logs
+*.log
