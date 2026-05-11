@@ -34,7 +34,12 @@ async fn http(options: ServerOptions) {
             },
         };
 
-    println!("Server running on {}", &options.address);
+    println!();
+    println!("Server running on:");
+    println!();
+    println!("Local:   http://localhost:{}", &options.address.port());
+    println!("Network: http://{}", &options.address);
+    println!();
 
     // serve
     if let Err(e) = axum::serve(listener, options.router).await {
@@ -58,7 +63,12 @@ async fn https(options: ServerOptions) {
         | Err(_) => panic!("Unable to load certificate"),
     };
 
-    println!("Server running on {}", &options.address);
+    println!();
+    println!("Server running on:");
+    println!();
+    println!("Local:   https://localhost:{}", &options.address.port());
+    println!("Network: https://{}", &options.address);
+    println!();
 
     // serve
     if let Err(e) = axum_server::bind_rustls(options.address, config)
