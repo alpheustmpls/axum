@@ -31,9 +31,6 @@ typos:
 
 # Lint code
 lint:
-    just lslint
-    just typos
-    cargo check
     cargo clippy
 
 # Run tests
@@ -43,6 +40,8 @@ test:
 # Check code
 check:
     just fmt
+    just lslint
+    just typos
     just lint
     just test
 
