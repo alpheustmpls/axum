@@ -15,7 +15,7 @@ serde = { version = "^1.0.228", features = ["derive"] }
 serde_json = { version = "1.0.150" }
 tokio = { version = "^1.52.3", features = ["full"] }
 tower-http = { version = "~0.7.0", features = ["fs", "cors", "compression-gzip"] }
-utoipa = { version = "^5.5.0", features = ["macros"] }
+utoipa = { version = "^5.5.0", features = ["macros", "preserve_order"] }
 utoipa-axum = { version = "~0.2.0" }
 utoipa-scalar = { version = "~0.3.0", features = ["axum"] }
 workspace_root = { version = "~0.2.0", features = ["tokio"] }

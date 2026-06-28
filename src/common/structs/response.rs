@@ -1,5 +1,6 @@
 use literalize::literal;
 use serde::{Deserialize, Serialize};
+use serde_json::Value;
 use utoipa::ToSchema;
 
 /// JSON response error.
@@ -29,8 +30,7 @@ pub struct JsonSuccessResponse<Data = ()> {
     /// Requested information for the response when `success` is `true`.
     pub data: Data,
     /// A list of errors for the response when `success` is `false`.
-    #[schema(max_items = 0)]
-    pub errors: Vec<JsonResponseErrorStruct>,
+    pub errors: Vec<Value>,
 }
 
 #[derive(Clone)]
