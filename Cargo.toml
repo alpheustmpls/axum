@@ -9,6 +9,7 @@ axum-test = { version = "^20.0.0" }
 axum_typed_multipart = { version = "~0.16.5" }
 dotenv_plus = { version = "~0.5.1" }
 jder_axum = { version = "~0.11.0", features = ["typed_multipart", "request_body_limit", "request_time_limit", "utoipa"] }
+literalize = { version = "~0.1.0", features = ["all"] }
 rustls = { version = "~0.23.40", features = ["ring"] }
 serde = { version = "^1.0.228", features = ["derive"] }
 serde_json = { version = "1.0.149" }
